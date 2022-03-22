@@ -11,21 +11,23 @@ function Stocks() {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${CLIENT_URL}${symbols}${TOKEN}`);
-        const { changePercent, companyName, latestPrice, symbol } =
-          response.data;
-        console.log(response);
-        setStocks({ changePercent, companyName, latestPrice, symbol });
+        const result = [];
+        result.push(response.data);
+
+        console.log(result);
+        setStocks(result);
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
   }, []);
+
   return (
     <div>
       <div>
         {(stocks || []).map((stock, index) => {
-          const { symbol, companyName, latestPrice, changePercent } = stock;
+          const { changePercent, companyName, latestPrice, symbol } = stock;
           return (
             <Headers
               changePercent={changePercent}

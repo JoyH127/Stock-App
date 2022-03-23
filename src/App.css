@@ -1,38 +1,82 @@
 .App {
+  background-color: rgb(38, 38, 38);
+  padding: 50px;
+  color: rgb(169, 169, 169);
+}
+.monitor {
+  padding: 15px;
+  background-color: rgb(2, 2, 2);
+  width: 450px;
+  margin: 0 auto;
+  padding-bottom: 400px;
+  border-radius: 3%;
+}
+
+.date p {
+  margin-left: 10px;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 27px;
+  margin: 0;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  text-align: left;
+  display: block;
+  font-size: 16px;
+  padding: 10px 0 10px 10px;
+  width: 420px;
+  background-color: rgb(43, 42, 42);
+  color: rgb(222, 222, 222);
+  border: none;
+  margin: auto;
+  border-radius: 5px;
+}
+.container {
+  top: 15px;
+  position: relative;
+  margin: 0 auto;
+  width: 440px;
+  border-radius: 3%;
+  background-color: rgb(2, 2, 2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.stock {
   color: white;
+  padding: 10px;
+  border-bottom: 1px solid rgb(58, 58, 58);
+
+  position: relative;
+}
+.stock h2 {
+  margin: 0;
+}
+.stock p {
+  font-size: 13px;
+  padding: 0px;
+  display: inline;
+  color: rgb(179, 179, 179);
 }
 
-.App-link {
-  color: #61dafb;
+.leftbox {
+  position: absolute;
+  top: 15px;
+  right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.latest {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.changePercent {
+  font-size: 12px;
+  width: 50px;
+  padding: 3px 0px 3px 0px;
+  border-radius: 7%;
+  text-align: center;
+  background-color: rgb(65, 222, 3);
 }

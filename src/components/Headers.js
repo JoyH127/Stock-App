@@ -1,11 +1,12 @@
-function Headers({ changePercent, companyName, lastestPrice, symbol }) {
+function Headers({ changePercent, companyName, latestPrice, symbol }) {
   return (
-    <div>
-      <h1>Stocks</h1>
-      <div>changePercent:{changePercent}</div>
-      <div>companyName: {companyName}</div>
-      <div>lastestPrice:{lastestPrice}</div>
-      <div>symbol:{symbol}</div>
+    <div className="stock">
+      <h2>{symbol}</h2>
+      <p>{companyName}</p>
+      <div className="leftbox">
+        <div className="latest">{latestPrice}</div>
+        <div className="changePercent">{changePercent}</div>
+      </div>
     </div>
   );
 }

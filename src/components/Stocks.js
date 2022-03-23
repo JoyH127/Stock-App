@@ -35,7 +35,7 @@ function Stocks() {
   // }, []);
 
   return (
-    <div>
+    <div className="container">
       <div>
         {(stocks || []).map((stock, index) => {
           const { changePercent, companyName, latestPrice, symbol } = stock;

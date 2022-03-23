@@ -1,6 +1,6 @@
 import "./App.css";
 import Stocks from "./components/Stocks";
-
+import Search from "./components/Search";
 function App() {
   return (
     <div className="App">
@@ -9,7 +9,7 @@ function App() {
         <div className="date">
           <p>September 14</p>
         </div>
-        <input type="text" placeholder="Search"></input>
+        <Search />
         <Stocks />
       </div>
     </div>

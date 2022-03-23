@@ -72,11 +72,21 @@ input {
   text-align: center;
   margin-bottom: 5px;
 }
-.changePercent {
+
+.changeRed {
   font-size: 12px;
   width: 50px;
   padding: 3px 0px 3px 0px;
   border-radius: 7%;
   text-align: center;
-  background-color: rgb(65, 222, 3);
+  background-color: rgb(222, 3, 3);
+}
+
+.changeGreen {
+  font-size: 12px;
+  width: 50px;
+  padding: 3px 0px 3px 0px;
+  border-radius: 7%;
+  text-align: center;
+  background-color: rgb(3, 222, 32);
 }

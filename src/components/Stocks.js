@@ -5,8 +5,10 @@ import Headers from "./Headers";
 
 function Stocks() {
   const [stocks, setStocks] = useState([]);
+
   // const [company, setCompany] = useState([]);
-  const symbols = ["fb", "snap", "spy"];
+
+  const symbols = ["fb", "snap", "spy", "aapl", "ndaq", "shop", "tsla"];
   const TOKEN = "/quote?token=pk_194d66f4bdde414eabebad40c2819297";
   useEffect(() => {
     const fetchData = async (company) => {
@@ -38,10 +40,10 @@ function Stocks() {
     <div className="container">
       <div>
         {(stocks || []).map((stock, index) => {
-          const { changePercent, companyName, latestPrice, symbol } = stock;
+          const { change, companyName, latestPrice, symbol } = stock;
           return (
             <Headers
-              changePercent={changePercent}
+              change={change}
               companyName={companyName}
               latestPrice={latestPrice}
               symbol={symbol}

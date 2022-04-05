@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { CLIENT_URL } from "../services/constants";
-import Headers from "./Headers";
+import Section from "./Section";
 
-function Stocks() {
+function Stocks({ value, getData }) {
   const [stocks, setStocks] = useState([]);
 
   // const [company, setCompany] = useState([]);
@@ -16,7 +16,6 @@ function Stocks() {
         const response = await axios.get(`${CLIENT_URL}${company}${TOKEN}`);
         const result = [];
         result.push(response.data);
-
         console.log(result);
         setStocks((prevState) => prevState.concat(result));
       } catch (error) {
@@ -25,6 +24,9 @@ function Stocks() {
     };
     const iterate = symbols.map(fetchData);
   }, []);
+  console.log(stocks);
+  // getData from monitor(parent) stocks(child)
+  getData(stocks);
 
   // useEffect(() => {
   //   const fetchCompany = async () => {
@@ -42,7 +44,7 @@ function Stocks() {
         {(stocks || []).map((stock, index) => {
           const { change, companyName, latestPrice, symbol } = stock;
           return (
-            <Headers
+            <Section
               change={change}
               companyName={companyName}
               latestPrice={latestPrice}

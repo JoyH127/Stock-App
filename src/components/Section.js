@@ -1,6 +1,8 @@
-function Headers({ change, companyName, latestPrice, symbol }) {
+import { useNavigate } from "react-router-dom";
+function Section({ change, companyName, latestPrice, symbol }) {
+  const navigate = useNavigate();
   return (
-    <div className="stock">
+    <div className="stock" onClick={() => navigate(`/${symbol}`)}>
       <h2>{symbol}</h2>
       <p>{companyName}</p>
       <div className="leftbox">
@@ -10,4 +12,4 @@ function Headers({ change, companyName, latestPrice, symbol }) {
     </div>
   );
 }
-export default Headers;
+export default Section;
